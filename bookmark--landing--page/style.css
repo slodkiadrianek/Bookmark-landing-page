@@ -19,7 +19,7 @@ body{
     display: flex;
     flex-direction: column;
     padding: 3vmax 12vmax;
-        overflow: hidden;
+        overflow-x: hidden;
 }
 header{
     display: flex;
@@ -39,12 +39,18 @@ header{
     color: var(--VeryDarkBlue);
 }
 .box__loggin{
+    background-color: var(--SoftRed);
+    color: white;
     border: 0.15vmax solid;
     padding: 0.5vmax 1.5vmax;
     border-radius: 0.3vmax;
     font-family: var(--FONT);
     font-weight: 500;
     letter-spacing: 3px;
+}
+.box__loggin:hover{
+    background-color: white;
+
 }
 .list:hover{
     color: var(--SoftRed);
@@ -56,16 +62,12 @@ header{
     padding: 6vmax 0;
 }
 .section__1__left {
-    width: 50%;
     display: flex;
     flex-direction: column;
 }
-.section__1__right {
-    width: 50%;
-}
 .section__1__img{
     position: relative;
-    left: 4vmax;
+    left: 8vmax;
     z-index: 2;
     width: 42vmax;
 }
@@ -91,4 +93,121 @@ header{
     font-family: var(--FONT);
     font-size: 1.3vmax;
     color: var(--GrayishBlue);
+}
+.section__1__con__btn{
+    display: flex;
+    padding-top: 1.5vmax;
+    gap: 1vmax;
+}
+.section__1__btn__blue{
+    font-family: var(--FONT);
+    font-size: 0.8vmax;
+    padding: .9vmax 1.3vmax;
+    background-color: var(--SoftBlue);
+    border: 1px solid var(--SoftBlue);
+    border-radius: .4vmax;
+    font-weight: 500;
+    color: white;
+}
+.section__1__btn__gray{
+    font-family: var(--FONT);
+    font-size: 0.8vmax;
+    padding: .9vmax 1.3vmax ;
+    background-color: rgb(238, 238, 238);
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: .4vmax;
+    font-weight: 500;
+    color: var(--GrayishBlue);
+    box-shadow: 0px 6px 10px rgb(238, 238, 238) ;
+}
+.section--2{
+    display: flex;
+    flex-direction: column;
+}
+.section__2__text__con{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section__2__h2{
+    font-family: var(--FONT);
+    font-size: 2.3vmax;
+    color: var(--VeryDarkBlue);
+    font-weight: 500;
+    padding-bottom: 2vmax;
+}
+.section__2__span{
+    font-size: 1vmax;
+    color: var(--GrayishBlue);
+    font-family: var(--FONT);
+    text-align: center;
+   padding-inline: 22.5vmax;
+}
+.section__2__btn__con{
+    padding-top: 3.5vmax;
+    display: flex;
+    justify-content: center;
+
+}
+.section__2__btn{
+    cursor: pointer;
+    background-color: transparent;
+    border:none ;
+    border-bottom: 1.2px solid rgb(228, 228, 228);
+    /* box-shadow: 0px 20px 10px rgb(228, 228, 228) ; */
+    padding: 1.6vmax 2.6vmax;
+    font-size: 1.1vmax;
+    font-family: var(--FONT);
+    color: var(--GrayishBlue);
+}
+.section__2__btn__active{
+    color: var(--VeryDarkBlue);
+border-bottom: 4px solid var(--SoftRed);
+}
+.section__2__img{
+    position: relative;
+    z-index: 2;
+    top: 5vmax;
+    width: 38vmax;
+}
+.section__2__shape{
+position: absolute;
+left: -22vmax;
+top: 77vmax;
+height: 21vmax;
+width: 69vmax;
+border-radius: 12vmax;
+background-color: var(--SoftBlue);
+z-index: 1;
+}
+.section__2__con{
+    display: flex;
+    gap: 8vmax;
+}
+.section__2__right{
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+.right{
+    padding: 0;
+    text-align: left;
+    font-size: 1.15vmax;
+}
+.top{
+    padding-top: 7.5vmax;
+}
+.section__2__btn__info{
+   margin-top: 3vmax;
+    background-color: var(--SoftBlue);
+    border: 2px solid var(--SoftBlue);
+    border-radius: 0.5vmax;
+    width: 10vmax;
+    color: white;
+    font-family: var(--FONT);
+    padding: .7vmax 0vmax;
+    padding-inline: 0.2vmax;
+    font-size: 1.2vmax;
+    font-weight: 400;
 }
