@@ -93,6 +93,7 @@ header{
     font-family: var(--FONT);
     font-size: 1.3vmax;
     color: var(--GrayishBlue);
+    margin-bottom: 1.5vmax;
 }
 .section__1__con__btn{
     display: flex;
