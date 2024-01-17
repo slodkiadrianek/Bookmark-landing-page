@@ -3,24 +3,31 @@
 const section2Btn = document.querySelectorAll('.section__2__btn')
 const section2BtnCon = document.querySelector('.section__2__btn__con')
 const section2Img = document.querySelector('.section__2__img')
+const section2Right = document.querySelectorAll('.section__2__right')
+const section2BoxCon = document.querySelectorAll('.section__2__box__con')
 
 section2BtnCon.addEventListener('click', function(e){
     const target = e.target
     if(target.classList.contains('section__2__btn')){
         section2Btn.forEach(el => el.classList.remove('section__2__btn__active'))
         target.classList.add('section__2__btn__active')
-        console.log(target.dataset.img);
         const dataSet = target.dataset.img;
-        console.log(dataSet);
+        section2Right.forEach(el => el.classList.remove('section__2__right__active'))
+        section2BoxCon.forEach(el =>  el.classList.remove('section__2__box__con__active'))
+        
         if( dataSet === '1'){
-            section2Img.src='images/illustration-features-tab-1.svg';
-            section2Img.alt = 'illustration-features-tab-1'
+            section2Right.forEach(el => el.dataset.text === '1' ? el.classList.add('section__2__right__active') : console.log(`yes`))
+            section2BoxCon.forEach(el => el.dataset.img === '1' ? el.classList.add('section__2__box__con__active') : console.log(`yes`))
         }else if (dataSet === '2'){
-            section2Img.src= 'images/illustration-features-tab-2.svg';
-            section2Img.alt = 'illustration-features-tab-2'
+
+            section2Right.forEach(el => el.dataset.text === '2' ? el.classList.add('section__2__right__active') : console.log(`yes`))
+            section2BoxCon.forEach(el => el.dataset.img === '2' ? el.classList.add('section__2__box__con__active') : console.log(`yes`))
         }else{
-            section2Img.src= 'images/illustration-features-tab-3.svg';
-            section2Img.alt = 'illustration-features-tab-3'
+            section2Right.forEach(el => el.dataset.text === '3' ? el.classList.add('section__2__right__active') : console.log(`yes`))
+            section2BoxCon.forEach(el => el.dataset.img === '3' ? el.classList.add('section__2__box__con__active') : console.log(`yes`))
         }
     }
 })
+
+
+    
