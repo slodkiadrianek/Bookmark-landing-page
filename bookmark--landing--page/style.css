@@ -7,7 +7,7 @@
 :root{
 /* ### Primary */
 --SoftBlue: hsl(231, 69%, 60%);
---SoftRed: hsl(0, 94%, 66%);
+--SoftRed: #fa5757;
    /* ### Neutral */
 --GrayishBlue: hsl(229, 8%, 60%);
 --VeryDarkBlue: hsl(229, 31%, 21%);
@@ -339,4 +339,59 @@ position: relative;
 .card__third{
 position: relative;
     top: 12vmax;
+}
+.section--4{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25vmax;
+}
+.section__4__con{
+    margin-top: 5vmax;
+    padding: 0em 22.5vmax;
+}
+.section__4__con > hr{
+   border: 0.05vmax solid rgb(223, 223, 223);
+}
+.section__4__box__con{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.2vmax;
+    margin-bottom: 0.9vmax;
+    align-items: center;
+}
+
+.section__4__box__con:hover{
+    color: #fa5757;
+    cursor: pointer;
+}
+.box__text{
+    font-family: var(--FONT);
+    font-weight: 500;
+
+}
+.box__text:hover{
+    color: var(--SoftRed);
+    cursor: pointer;
+}
+.box__p{
+    font-family: var(--FONT);
+    color: var(--GrayishBlue);
+    line-height: 1.8vmax;
+    height: 0vmax;
+    opacity: 0;
+    transition: .7s all;
+}
+.box__p__active{
+    height: auto;
+    opacity: 1;
+    margin: 1.5vmax 0vmax;
+}
+.arrow {
+    height: 1vmax;
+    width: 1.4vmax;
+    cursor: pointer;
+    transition: 1s all;
+}
+.arrow__active{
+    transform: rotate(180deg);
 }
