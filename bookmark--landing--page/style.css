@@ -344,6 +344,8 @@ position: relative;
     display: flex;
     flex-direction: column;
     margin-top: 25vmax;
+    justify-content: center;
+    align-items: center;
 }
 .section__4__con{
     margin-top: 5vmax;
@@ -394,4 +396,20 @@ position: relative;
 }
 .arrow__active{
     transform: rotate(180deg);
+}
+.section__4__btn{
+    margin-top: 1.2vmax;
+    color: white;
+    background-color: var(--SoftBlue);
+    font-family: var(--FONT);
+    border: 2px solid var(--SoftBlue);
+    padding: 0.6vmax 2.5vmax;
+    font-size: .8vmax;
+    border-radius: 0.4vmax;
+    font-weight: 500;
+}
+.section__4__btn:hover {
+    background-color: white;
+    color: var(--SoftBlue);
+    cursor: pointer;
 }
