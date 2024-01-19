@@ -7,6 +7,9 @@ const section2Right = document.querySelectorAll('.section__2__right')
 const section2BoxCon = document.querySelectorAll('.section__2__box__con')
 const section4BoxCon = document.querySelectorAll('.section__4__box__con')
 const boxP = document.querySelector('.box__p')
+const section5Input = document.querySelector('.section__5__input')
+const section5Btn = document.querySelector('.section__5__btn')
+const labelEmail  = document.querySelector('.label__email')
 
 section2BtnCon.addEventListener('click', function(e){
     const target = e.target;
@@ -35,10 +38,32 @@ section4BoxCon.forEach(el => {
         const target = e.target.closest('.section__4__box');
         target.children[1].classList.toggle('box__p__active');
        const arrow  = target.children[0];
-      arrow.children[1].classList.toggle('arrow__active');
-      
-       
+      arrow.children[1].classList.toggle('arrow__active'); 
     })
 })
+
+section5Btn.addEventListener('click', function(){
+    const  inputText = section5Input.value ;
+    console.log(inputText);
+    const specialCharacters = ['@', '.com']
+    const firstChecked = specialCharacters.every(el => inputText.includes(el))
+    console.log(firstChecked);
+    if(firstChecked){
+        const splittedEm = inputText.split('@')
+        const beforeEmail  =splittedEm[0]
+        const afterEmail = splittedEm[1].split('.com')
+        console.log(beforeEmail, afterEmail);
+        if(beforeEmail.length > 1 && afterEmail[0].length > 1){
+        section5Input.value = ''
+        }else{
+            section5Input.classList.add('section__5__input__error')
+            labelEmail.classList.add('label__email__active')
+        }
+    }else{
+        section5Input.classList.add('section__5__input__error')
+        labelEmail.classList.add('label__email__active')
+    }
+})
+
 
     
